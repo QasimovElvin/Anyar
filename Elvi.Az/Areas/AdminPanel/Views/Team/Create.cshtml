@@ -1,0 +1,39 @@
+﻿@using Elvi.Az.Models
+
+@{
+    ViewData["Title"] = "Create";
+}
+@model Team
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Team Create</h4>
+            <form class="forms-sample" asp-controller="Team" asp-action="Create" asp-area="AdminPanel" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input type="text" class="form-control"asp-for="Name" placeholder="Name">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Profession">Profession</label>
+                    <input type="text" class="form-control" asp-for="Profession" placeholder="Profession">
+                    <span asp-validation-for="Profession"></span>
+                </div>
+               <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <input type="text" class="form-control" asp-for="Description" placeholder="Description">
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageFile">Image</label>
+                    <input  class="form-control" asp-for="ImageFile" placeholder="Name">
+                    <span asp-validation-for="ImageFile"></span>
+                </div>
+                <div asp-validation-summary="ModelOnly"></div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light" asp-action="Index">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
